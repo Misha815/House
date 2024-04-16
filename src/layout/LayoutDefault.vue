@@ -59,8 +59,15 @@
           }
 
           .svg-color {
+            transition: 1s;
+
             &:hover {
               transform: scale(1.1);
+            }
+
+            &:active {
+              transition: 1s;
+              rotate: (360deg);
             }
           }
         }
@@ -84,7 +91,7 @@
 
       span {
         font-size: 16px;
-        color: #fff;
+
       }
     }
   }

@@ -2,9 +2,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProductView from '@/views/Product.view.vue'
 import NewView from '@/views/NewView.vue'
+import NotFound from '@/views/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+
   routes: [
     {
       path: '/',
@@ -15,7 +17,9 @@ const router = createRouter({
       path: '/product',
       name: 'product',
       component: ProductView
+
     },
+
     {
       path: '/new',
       name: 'new',
@@ -31,8 +35,12 @@ const router = createRouter({
       name: 'trash',
       component: () => import('../views/TrashView.vue')
     },
+    { path: '/:pathMatch(.*)*',
+     name: 'NotFound',
+      component: NotFound },
 
-  ]
+  ],
+
 })
 
 export default router

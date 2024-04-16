@@ -8,7 +8,7 @@
             экспериментов, поражающих по своей масштабности и грандиозности. Мы вынуждены отталкиваться от того, что
             консультация с широким активом.</p>
         </div>
-        <div class="about-right"><img src="../assets/images/AboutinLogo.png" alt=""></div>
+        <div class="about-right"></div>
       </div>
 
       <about-slider />
@@ -32,7 +32,8 @@ export default {
 
   .about__ {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+
 
     .about-left {
       p {
@@ -42,7 +43,10 @@ export default {
     }
 
     .about-right {
-      img {}
+      width: 222px;
+      height: 222px;
+      background: no-repeat center url('../assets/images/AboutLogo.png');
+      border-radius: 40px;
     }
   }
 }

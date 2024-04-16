@@ -12,4 +12,60 @@
     border: 1px solid #ff0000;
     color: red;
   }
+};
+@mixin card{
+  .card {
+    margin-top: 30px;
+    width: 350px;
+    height: 730px;
+    background-color: #535353;
+    transition: 0.1s;
+    display: flex;
+    justify-content: center;
+&:hover{
+  transition: 0.1s;
+  scale:(105%);
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.384);
+}
+    .card-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 20px 20px 30px 20px;
+
+      image {}
+
+      .author {
+        font-size: 18px;
+      }
+
+      .title {
+        font-size: 30px;
+        line-height: 0px;
+      }
+
+      .structure {
+        font-size: 18px;
+      }
+
+      .price {
+        font-size: 24px;
+      }
+
+      .btn-trash {
+        width: 310px;
+        height: 65px;
+        color: #fff;
+        background: none;
+        border: 1px solid #fff;
+        font-size: 20px;
+
+        &:hover {
+          color: red;
+          border: 1px solid red;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
 }

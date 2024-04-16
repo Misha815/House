@@ -8,8 +8,6 @@
 import LayoutDefault from '../layout/LayoutDefault.vue'
 export default {
   components: { LayoutDefault },
-
-
 }
 </script>
 

@@ -19,6 +19,7 @@
       <a class="link-header" href="/product">Вся продукция</a>
     </div>
 
+    <ProductPoster />
   </div>
 </template>
 
@@ -26,8 +27,9 @@
 import ProductEng from './ProductEng.vue'
 import ProductFranch from './ProductFranch.vue'
 import ProductGermany from './ProductGermany.vue';
+import ProductPoster from './ProductPoster.vue';
 export default {
-  components: { ProductFranch, ProductGermany, ProductEng },
+  components: { ProductFranch, ProductGermany, ProductEng, ProductPoster },
   data() {
     return {
       current: 'France'
@@ -85,10 +87,14 @@ export default {
 
   .more-product {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 36px;
+
 
     .link-header {
+      border-bottom: 1px solid rgb(224, 224, 224);
+
       &:hover {
+        border-bottom: 1px solid rgb(255, 68, 0);
         color: red;
       }
     }

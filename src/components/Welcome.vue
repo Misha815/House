@@ -28,11 +28,13 @@ export default {
     justify-content: center;
 
     .container__wrapper-left {
-      width: 540px;
+      max-width: 540px;
+      margin: 0 auto;
       margin-right: 30px;
 
       img {
-        max-width: 540px;
+        max-width: 100%;
+
       }
     }
 
@@ -64,5 +66,46 @@ export default {
       }
     }
   }
+}
+@media all and (min-width: 1281px) {
+   h1{
+
+        font-size: 100px;
+   }
+}
+
+@media all and (min-width: 1025px) and (max-width: 1280px) {
+  h1{
+
+    font-size: 100px;
+}
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px) {
+  h1{
+
+    font-size: 100px;
+}
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+  h1{
+
+    font-size: 100px;
+
+}
+}
+
+@media all and (min-width: 321px) and (max-width: 480px) {
+  h1{
+    font-size: 100px;
+}
+}
+
+@media all and (max-width: 320px) {
+  h1{
+
+    font-size: 100px;
+}
 }
 </style>

@@ -1,0 +1,45 @@
+{
+    "cards": [{
+            "id": 1,
+            "image": "/src/assets/images/card-image.jpg",
+            "author": "Марсель Руссо",
+            "title": "Охота Амура",
+            "structure": "Холст, Масло(50х80)",
+            "price": "14 500 руб"
+        },
+        {
+            "id": 2,
+            "image": "/src/assets/images/card-image.jpg",
+            "author": "Марсель Руссо",
+            "title": "Охота Амура",
+            "structure": "Холст, Масло(50х80)",
+            "price": "14 500 руб"
+        },
+        {
+            "id": 3,
+            "image": "/src/assets/images/card-image.jpg",
+            "author": "Марсель Руссо",
+            "title": "Охота Амура",
+            "structure": "Холст, Масло(50х80)",
+            "price": "14 500 руб"
+        },
+        {
+            "id": 4,
+            "image": "/src/assets/images/card-image.jpg",
+            "author": "Марсель Руссо",
+            "title": "Охота Амура",
+            "structure": "Холст, Масло(50х80)",
+            "price": "14 500 руб"
+        },
+        {
+            "id": 5,
+            "image": "/src/assets/images/card-image.jpg",
+            "author": "Марсель Руссо",
+            "title": "Охота Амура",
+            "structure": "Холст, Масло(50х80)",
+            "price": "14 500 руб"
+        }
+
+
+    ]
+}

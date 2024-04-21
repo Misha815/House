@@ -8,7 +8,6 @@
         <span class="structure">{{ card.structure }}</span>
         <span class="price">{{ card.price }}</span>
         <button class="btn-trash">В корзину</button>
-
       </div>
     </div>
 
@@ -79,9 +78,9 @@ const cards = ref([
   margin: 0 auto;
   max-width: 1110px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 30px 30px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(350px, 1fr));
+  justify-items: center;
   flex-wrap: wrap;
   @include card;
 

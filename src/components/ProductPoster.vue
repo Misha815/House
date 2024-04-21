@@ -26,14 +26,15 @@ export default {
 .Poster-container {
   display: flex;
   margin-top: 30px;
-  z-index: 566565;
-  background-blend-mode: multiply;
+  width: 100%;
+  margin-bottom: 30px;
 
   .Poster-container__inner {
 
     background: linear-gradient(rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)), center no-repeat url('../assets/images/Poster.jpg');
-    width: 1940px;
+        rgba(0, 0, 0, 0.4)), center no-repeat  url('../assets/images/Poster.jpg');
+        background-size: 100% 100%;
+    width: 100%;
     height: 774px;
     display: flex;
     justify-content: space-around;

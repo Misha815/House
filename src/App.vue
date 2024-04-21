@@ -10,5 +10,6 @@
 <style lang="scss" scoped>
 .container {
   margin: 0 auto;
+
 }
 </style>

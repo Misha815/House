@@ -169,7 +169,11 @@ export default {
 
 
     .LayoutDefault__footer--inner {
-        width: 1440px;
+
+
+
+      width: 1440px;
+      padding: 50px 0 50px 0;
 
       .footer__wrapper {
         display: flex;
@@ -179,6 +183,7 @@ export default {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+
           .contact-number {
             display: flex;
             flex-direction: column;
@@ -191,27 +196,30 @@ export default {
           width: 445px;
 
           .reproductions {
-            span{
-              font-weight:600;
+            span {
+              font-weight: 600;
             }
+
             .link-nav {
               list-style-type: none;
             }
           }
 
           .new-product {
-            span{
-              font-weight:600;
+            span {
+              font-weight: 600;
             }
+
             .link-nav {
               list-style-type: none;
             }
           }
 
           .about {
-            span{
-              font-weight:600;
+            span {
+              font-weight: 600;
             }
+
             .link-nav {
               list-style-type: none;
             }
@@ -240,152 +248,161 @@ export default {
   }
 
 }
+
 @media (width: 740px) {
   .LayoutDefault {
-   max-width: 720px;
-  .LayoutDefault__header {
+    max-width: 720px;
 
-    .LayoutDefault__nav {
-      min-height: 100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .LayoutDefault__header {
 
-      .nav-link {
+      .LayoutDefault__nav {
+        min-height: 100px;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        width: 472px;
+        align-items: center;
 
-        .router-link-exact-active {
-          color: #D90021;
-        }
+        .nav-link {
+          display: flex;
+          justify-content: space-between;
+          width: 472px;
 
-        .link-header {
-          text-decoration-line: none;
-
-          &:hover {
-            color: rgb(255, 0, 0);
+          .router-link-exact-active {
+            color: #D90021;
           }
 
-          .svg-color {
-            transition: 1s;
+          .link-header {
+            text-decoration-line: none;
 
             &:hover {
-              transform: scale(1.1);
+              color: rgb(255, 0, 0);
             }
 
-            &:active {
+            .svg-color {
               transition: 1s;
-              rotate: (360deg);
+
+              &:hover {
+                transform: scale(1.1);
+              }
+
+              &:active {
+                transition: 1s;
+                rotate: (360deg);
+              }
             }
           }
         }
       }
     }
-  }
 
-  .LayoutDefault__main {
-    min-height: 100vh;
+    .LayoutDefault__main {
+      min-height: 100vh;
 
-    .btn-to-top {      cursor: pointer;
-      width: 60px;
-      height: 60px;
+      .btn-to-top {
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
 
-      border-radius: 50%;
-      font-size: 22px;
-      line-height: 22px;
-      background: #4e4e4e;
-      box-shadow: none;
-      border: none;
-      text-align: center;
-      transition: 1s;
-
-      &:hover {
-        scale: (105%);
-        transition: 0.4s;
-      }
-
-      img {
-        transition: 0.4s;
-        width: 40px;
+        border-radius: 50%;
+        font-size: 22px;
+        line-height: 22px;
+        background: #4e4e4e;
+        box-shadow: none;
+        border: none;
+        text-align: center;
+        transition: 1s;
 
         &:hover {
+          scale: (105%);
           transition: 0.4s;
-          scale: (0.4s);
+        }
+
+        img {
+          transition: 0.4s;
+          width: 40px;
+
+          &:hover {
+            transition: 0.4s;
+            scale: (0.4s);
+          }
         }
       }
     }
-  }
 
-  .LayoutDefault__footer {
-    min-height: 17vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .LayoutDefault__footer {
+      min-height: 17vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
 
-    .LayoutDefault__footer--inner {
+      .LayoutDefault__footer--inner {
         width: 1440px;
 
-      .footer__wrapper {
-        display: flex;
-        justify-content: space-between;
-
-        .footer__label {
+        .footer__wrapper {
           display: flex;
-          flex-direction: column;
           justify-content: space-between;
-          .contact-number {
+
+          .footer__label {
             display: flex;
             flex-direction: column;
-          }
-        }
-
-        .footer__nav-links {
-          display: flex;
-          justify-content: space-around;
-          width: 445px;
-
-          .reproductions {
-            span{
-              font-weight:600;
-            }
-            .link-nav {
-              list-style-type: none;
-            }
-          }
-
-          .new-product {
-            span{
-              font-weight:600;
-            }
-            .link-nav {
-              list-style-type: none;
-            }
-          }
-
-          .about {
-            span{
-              font-weight:600;
-            }
-            .link-nav {
-              list-style-type: none;
-            }
-          }
-        }
-
-        .footer__social {
-
-          .list-social {
-            list-style-type: none;
-            display: flex;
             justify-content: space-between;
+
+            .contact-number {
+              display: flex;
+              flex-direction: column;
+            }
           }
 
-          .license {
+          .footer__nav-links {
             display: flex;
-            flex-direction: column;
+            justify-content: space-around;
+            width: 445px;
+
+            .reproductions {
+              span {
+                font-weight: 600;
+              }
+
+              .link-nav {
+                list-style-type: none;
+              }
+            }
+
+            .new-product {
+              span {
+                font-weight: 600;
+              }
+
+              .link-nav {
+                list-style-type: none;
+              }
+            }
+
+            .about {
+              span {
+                font-weight: 600;
+              }
+
+              .link-nav {
+                list-style-type: none;
+              }
+            }
+          }
+
+          .footer__social {
+
+            .list-social {
+              list-style-type: none;
+              display: flex;
+              justify-content: space-between;
+            }
+
+            .license {
+              display: flex;
+              flex-direction: column;
+            }
+
           }
 
         }
@@ -395,6 +412,5 @@ export default {
     }
 
   }
-
-}}
+}
 </style>

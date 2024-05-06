@@ -10,18 +10,19 @@
         </div>
         <div class="about-right"></div>
       </div>
-
       <about-slider />
+
     </div>
   </layout-default>
 
 </template>
 <script>
-import AboutSlider from '../components/icons/AboutSlider.vue'
+import AboutSlider from '../components/AboutSlider.vue'
+
 import LayoutDefault from '../layout/LayoutDefault.vue'
 
 export default {
-  components: { LayoutDefault, AboutSlider },
+  components: { LayoutDefault, AboutSlider, },
 
 }
 </script>

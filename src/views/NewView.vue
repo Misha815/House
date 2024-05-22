@@ -1,6 +1,6 @@
 <template>
   <layout-default>
-    <div>New</div>
+    <div>В настоящий момент новых картин нет.</div>
   </layout-default>
 </template>
 

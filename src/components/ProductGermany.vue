@@ -84,7 +84,5 @@ const cards = ref([
   justify-items: center;
   flex-wrap: wrap;
   @include card;
-
-
 }
 </style>

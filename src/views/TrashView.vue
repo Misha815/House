@@ -1,13 +1,17 @@
 <template>
   <layout-default>
-    <div>trash</div>
+    <div>
+    <trash />
+  </div>
   </layout-default>
 </template>
 
 <script>
+import Trash from '../components/Trash.vue'
 import LayoutDefault from '../layout/LayoutDefault.vue'
+
 export default {
-  components: { LayoutDefault },
+  components: { LayoutDefault, Trash },
 
 }
 </script>

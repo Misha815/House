@@ -7,6 +7,9 @@
             <img src="../assets/images/logo.svg" alt="">
           </RouterLink>
         </div>
+        <button @click="openPopup" class="call-voice">Звонок</button>
+        <popup ref="popup"/>
+
         <div class="nav-link">
           <RouterLink class="link-header" to="/product">Репродукции</RouterLink>
           <RouterLink class="link-header" to="/new">Новинки</RouterLink>
@@ -75,10 +78,17 @@
 </template>
 
 <script>
+import Popup from '../components/Popup.vue'
 import BackToTop from 'vue-backtotop'
 export default {
-  components: { BackToTop }
+  components: {BackToTop ,Popup },
+  methods: {
+    openPopup(){
+      this.$refs.popup.openPopup();
+    }
+  },
 }
+
 </script>
 
 <style lang="scss" scoped>
@@ -93,7 +103,16 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
+       .call-voice{
+        all:unset;
+        transition: 1s;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        &:hover{
+          color:red;
+          border-bottom: 1px solid rgb(255, 0, 0);
+          transition: 1s;
+        }
+       }
       .nav-link {
         display: flex;
         justify-content: space-between;

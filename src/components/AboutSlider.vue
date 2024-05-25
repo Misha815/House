@@ -1,22 +1,15 @@
 <template>
   <div class="slider">
     <div class="slides">
+      <button @click="prevSlide">Предыдущий слайд</button>
       <div class="slides-inner" v-for="(slide, index) in slides" :key="index" :class="{ active: index === current }">
         <div class="slides-inner__warp">
           <img :src="slide.image" :alt="slide.alt">
           <span>{{ slide.name }}</span>
         </div>
-
       </div>
+      <button @click="nextSlide">Следующий слайд</button>
     </div>
-    <div class="nav-slider">
-      <div class="nav-slider__inner">
-        <button @click="prevSlide">Предыдущий слайд</button>
-        <button @click="nextSlide">Следующий слайд</button>
-      </div>
-
-    </div>
-
   </div>
 </template>
 

@@ -1,14 +1,13 @@
 <template>
-  <div class="card-container">
+  <div class="grid-1">
     <div class="card" v-for="card in cards" :key="card.id">
-      <div class="card-inner">
-        <img class="image" :src="card.image">
-        <span class="author">{{ card.author }}</span>
-        <span class="title">{{ card.title }}</span>
-        <span class="structure">{{ card.structure }}</span>
-        <span class="price">{{ card.price }}</span>
-        <button class="btn-trash">В корзину</button>
-
+      <div class="card__inner">
+        <img class="card__image" :src="card.image">
+        <span class="card__author">{{ card.author }}</span>
+        <span class="card__title">{{ card.title }}</span>
+        <span class="card__structure">{{ card.structure }}</span>
+        <span class="card__price">{{ card.price }}</span>
+        <button class="card__btn-trash">В корзину</button>
       </div>
     </div>
 
@@ -72,17 +71,17 @@ const cards = ref([
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @import "@/assets/mixin.scss";
 
-.card-container {
+.grid-1 {
   margin: 0 auto;
-  max-width: 1110px;
+  max-width: 1280rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32rem;
+
   justify-items: center;
   flex-wrap: wrap;
-  @include card;
 }
 </style>

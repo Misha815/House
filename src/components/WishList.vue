@@ -1,105 +1,112 @@
 <template>
-  <div class="shop-box">
-    <div class="shop-box__inner">
-      <div class="shop-box__header">
-        <h2>Репродукции</h2>
+
+    <div class="shop-box">
+      <div class="shop-box__top">
+        <h2 class="headline-2">Репродукции</h2>
+        <div class="shop-box__tabs">
+          <button @click="Franch" class="shop-box__tab">Франция</button>
+          <button @click="Germany" class="shop-box__tab">Германия</button>
+          <button @click="English" class="shop-box__tab">Англия</button>
+        </div>
       </div>
-      <div class="shop-box__nav">
-        <button @click="Franch" class="link-header">Франция</button>
-        <button @click="Germany" class="link-header">Германия</button>
-        <button @click="English" class="link-header">Англия</button>
+      <div class="shop-box__content">
+        <product-eng v-if="current === 'England'" />
+        <product-germany v-else-if="current === 'Germany'" />
+        <product-franch v-else-if="current === 'France'" />
       </div>
-    </div>
-    <div class="shop-box__wrapper">
-      <product-eng v-if="current === 'England'" />
-      <product-germany v-else-if="current === 'Germany'" />
-      <product-franch v-else-if="current === 'France'" />
-    </div>
-    <div class="more-product">
-      <a class="link-header" href="/product">Вся продукция</a>
+      <div class="shop-box__more">
+        <a class="shop-box__more-link" href="/product">Вся продукция</a>
+      </div>
+
+      <ProductPoster />
     </div>
 
-    <ProductPoster />
-  </div>
 </template>
 
 <script>
-import ProductEng from './ProductEng.vue'
-import ProductFranch from './ProductFranch.vue'
-import ProductGermany from './ProductGermany.vue';
-import ProductPoster from './ProductPoster.vue';
+import ProductEng from "./ProductEng.vue";
+import ProductFranch from "./ProductFranch.vue";
+import ProductGermany from "./ProductGermany.vue";
+import ProductPoster from "./ProductPoster.vue";
 export default {
   components: { ProductFranch, ProductGermany, ProductEng, ProductPoster },
   data() {
     return {
-      current: 'France'
+      current: "France",
     };
   },
   methods: {
     Franch() {
-      this.current = 'France';
+      this.current = "France";
     },
     English() {
-      this.current = 'England';
+      this.current = "England";
     },
     Germany() {
-      this.current = 'Germany';
+      this.current = "Germany";
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
+@use "../assets/mixins/text";
+@import "@/assets/mixin.scss";
 .shop-box {
-  .shop-box__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 42rem;
+ 
+ 
+  margin-bottom: 42rem;
+
+  &__top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+  &__tabs {
+    display: flex;
+    gap: 16rem;
+  }
+  &__tab {
+    background-color: transparent;
+    border: none;
+    padding: 12rem;
+    color: var(--main-white);
+    border-radius: 24rem;
+    cursor: pointer;
+    @include text.body-20;
+    transition: all 0.2s ease-in-out;
 
-    .shop-box__header {
-      h2 {
-        font-size: 40px;
-      }
+    @include hover {
+      transition: all 0.2s ease-in-out;
+      color: var(--coloring-red);
     }
 
-    .shop-box__nav {
-      .link-header {
-        all: unset;
-        font-size: 20px;
-
-
-        &:not(:last-child) {
-          margin-right: 40px;
-        }
-
-        &:hover {
-          transition: 0.2s;
-          color: red;
-        }
-
-        &:focus {
-          color: red;
-        }
-      }
+    &:focus {
+      background-color: var(--accent-dark-grey);
     }
   }
-
-  .shop-box__wrapper {}
-
-  .more-product {
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+  &__more {
+    display: flex;
+    justify-content: center;
+  }
+  &__more-link {
+    @include text.body-20;
     text-align: center;
-    margin-top: 36px;
+    color: var(--main-white);
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
 
-
-    .link-header {
-      border-bottom: 1px solid rgb(224, 224, 224);
-
-      &:hover {
-        border-bottom: 1px solid rgb(255, 68, 0);
-        color: red;
-      }
+    @include hover {
+      color: var(--coloring-red);
+      transition: all 0.2s ease-in-out;
     }
-
-
   }
 }
 </style>

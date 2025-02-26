@@ -1,111 +1,69 @@
 <template>
-  <div class="container">
-    <div class="container__wrapper">
-      <div class="container__wrapper-left">
-        <img src="../assets/images/Home poster.png" alt="">
-      </div>
-      <div class="container__wrapper-right">
-        <h1>Реплики картин от <span>Ink. House</span></h1>
-        <p>Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.</p>
-        <RouterLink class="product-link" to="/product">Продукция</RouterLink>
+  <section class="section-1">
+    <div class="main">
+      <div class="main__wrapper">
+        <div class="main__wrapper-banner">
+          <img src="../assets/images/main-banner.jpg" alt="Главный баннер" />
+        </div>
+        <div class="main__wrapper-heading">
+          <h1 class="main__wrapper-heading-title headline-1">Реплики картин от <span>Ink. House</span></h1>
+          <p class="main__wrapper-heading-subtitle">Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.</p>
+          <RouterLink class="product-link" to="/product">Продукция</RouterLink>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style lang="scss" scoped>
+@use "../assets/mixins/text";
 @import "@/assets/mixin.scss";
 
-.container {
-  .container__wrapper {
-    display: flex;
-    justify-content: center;
 
-    .container__wrapper-left {
-      max-width: 540px;
-      margin: 0 auto;
-      margin-right: 30px;
+.main {
+  &__wrapper {
+    position: relative;
+   
+  }
 
-      img {
-        max-width: 100%;
-
-      }
-    }
-
-    .container__wrapper-right {
-      width: 540px;
-      height: 331px;
-      display: flex;
-      justify-content: space-around;
-      flex-direction: column;
-      margin: auto;
-
-
-      h1 {
-        font-size: 60px;
-        line-height: 100%;
-
-        span {
-          color: red
-        }
-      }
-
-      p {
-        line-height: normal;
-      }
-
-      .product-link {
-        margin-top: 30px;
-        @include product;
-      }
+  &__wrapper-banner {
+    height: 100%;
+    width: 100%;
+    img{
+      // border: 1rem solid var(--main-white);
+      box-shadow: 1rem 1rem 10rem 1rem rgba(0, 0, 0, 0.384);
+      border-radius: 24rem;
+      max-width: 1920rem;
+      max-height: 768rem;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+      pointer-events: none;
     }
   }
-}
-@media all and (min-width: 1281px) {
-   h1{
 
-        font-size: 100px;
-   }
-}
+  &__wrapper-heading {
+    position: absolute;
+    bottom: 64rem;
+    left: 32rem;
 
-@media all and (min-width: 1025px) and (max-width: 1280px) {
-  h1{
+  }
 
-    font-size: 100px;
-}
-}
+  &__wrapper-heading-title {
+    span{
+      color: var(--coloring-red);
+    }
+  }
 
-@media all and (min-width: 769px) and (max-width: 1024px) {
-  h1{
-
-    font-size: 100px;
-}
+  &__wrapper-heading-subtitle {
+    @include text.body-20;
+    color: var(--medium-grey);
+  }
 }
 
-@media all and (min-width: 481px) and (max-width: 768px) {
-  h1{
-
-    font-size: 100px;
-
-}
-}
-
-@media all and (min-width: 321px) and (max-width: 480px) {
-  h1{
-    font-size: 100px;
-}
-}
-
-@media all and (max-width: 320px) {
-  h1{
-
-    font-size: 100px;
-}
-}
 </style>

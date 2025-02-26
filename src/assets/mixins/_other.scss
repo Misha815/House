@@ -1,0 +1,11 @@
+@import "../variables/media";
+@import "../mixins/media";
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+

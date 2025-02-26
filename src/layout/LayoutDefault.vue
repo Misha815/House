@@ -1,435 +1,236 @@
 <template>
-  <div class="LayoutDefault">
-    <div class="LayoutDefault__header">
-      <nav class="LayoutDefault__nav">
-        <div class="nav-link">
-          <RouterLink class="link-header" to="/">
-            <img src="../assets/images/logo.svg" alt="">
+  <div class=" LayoutDefault">
+    <div class="header">
+      <nav class="header__nav">
+        <div class="header__nav-links">
+          <RouterLink class="header__nav-link" to="/">
+            <img src="../assets/images/logo.svg" alt="" />
           </RouterLink>
         </div>
-        <button @click="openPopup" class="call-voice">Звонок</button>
-        <popup ref="popup"/>
 
-        <div class="nav-link">
-          <RouterLink class="link-header" to="/product">Репродукции</RouterLink>
-          <RouterLink class="link-header" to="/new">Новинки</RouterLink>
-          <RouterLink class="link-header" to="/about">О нас</RouterLink>
-          <RouterLink class="link-header" to="/trash"> <img class="svg-color" src="../assets/images/trash.svg" alt="">
-          </RouterLink>
+        <div class="header__nav-links">
+          <RouterLink class="header__nav-link link-1" to="/товары">Репродукции</RouterLink>
+          <RouterLink class="header__nav-link link-1" to="/new">Новинки</RouterLink>
+          <RouterLink class="header__nav-link link-1" to="/about">О нас</RouterLink>
         </div>
       </nav>
+      <div class="header__nav-menu">
+        <RouterLink class="header__nav-link link-1" to="/trash"> <img class="svg-color" src="../assets/images/trash.svg" alt="" /> </RouterLink>
+      </div>
     </div>
-    <main class="LayoutDefault__main">
+    <main class="main container">
       <slot />
-      <back-to-top bottom="50px" right="14px">
-        <button type="button" class="btn btn-info btn-to-top"><i class="fa fa-chevron-up"><img
-              src="../assets/images/Up.svg" alt=""></i></button>
-      </back-to-top>
     </main>
-    <footer class="LayoutDefault__footer">
-      <div class="LayoutDefault__footer--inner">
-        <div class="footer__wrapper">
-          <div class="footer__label"><a href="/"> <img src="../assets/images/logo.svg" alt=""></a>
-            <div class="contact-number"><span>+7 (999) 543-54-54</span>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__col">
+          <div class="footer__col-number">
+            <a href="/">
+              <img src="../assets/images/logo.svg" alt="" />
+            </a>
+            <div class="contact-number">
+              <span>+7 (999) 543-54-54</span>
               <i>Мастерская</i>
             </div>
           </div>
-          <div class="footer__nav-links">
-            <div class="reproductions">
-              <span>Репродукции</span>
-              <ul>
-                <li class="link-nav"><a href="/product">Франция</a></li>
-                <li class="link-nav"><a href="/product">Германия</a></li>
-                <li class="link-nav"><a href="/product">Англия</a></li>
-              </ul>
-            </div>
-            <div class="new-product">
-              <span>Новинки</span>
-              <ul>
-                <li class="link-nav"><a href="#">2023</a></li>
-                <li class="link-nav"><a href="#">2024</a></li>
-              </ul>
-            </div>
-            <div class="about">
-              <span>О нас</span>
-              <ul>
-                <li class="link-nav"><a href="#">Художники</a></li>
-                <li class="link-nav"><a href="#">Менеджеры</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer__social">
-            <ul class="list-social">
-              <li class="link-social"><a href="#"><img src="../assets/images/Frame.svg" alt=""></a></li>
-              <li class="link-social"><a href="#"><img src="../assets/images/Frame-1.svg" alt=""></a></li>
-              <li class="link-social"><a href="#"><img src="../assets/images/Frame-2.svg" alt=""></a></li>
-            </ul>
-            <div class="license"><span>Ink. House ®</span>
-              <span>All rights reserved</span>
-              <span>&copy; 2019-2024</span>
-            </div>
-
-          </div>
+        </div>
+        <div class="footer__col">
+          <span>Репродукции</span>
+          <ul class="footer__list-nav">
+            <li class="footer__link-nav"><a href="/product" class="link-1">Франция</a></li>
+            <li class="footer__link-nav"><a href="/product" class="link-1">Германия</a></li>
+            <li class="footer__link-nav"><a href="/product" class="link-1">Англия</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <span>Новинки</span>
+          <ul class="footer__list-nav">
+            <li class="footer__link-nav"><a href="#" class="link-1">2023</a></li>
+            <li class="footer__link-nav"><a href="#" class="link-1">2024</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <span>О нас</span>
+          <ul class="footer__list-nav">
+            <li class="footer__link-nav"><a href="#" class="link-1">Художники</a></li>
+            <li class="footer__link-nav"><a href="#" class="link-1">Менеджеры</a></li>
+          </ul>
         </div>
 
+        <div class="footer__col">
+          <ul class="footer__list-social">
+            <li class="footer__link-social">
+              <a href="#" class="link-1"><img src="../assets/images/Frame.svg" alt="" /></a>
+            </li>
+            <li class="footer__link-social">
+              <a href="#" class="link-1"><img src="../assets/images/Frame-1.svg" alt="" /></a>
+            </li>
+            <li class="footer__link-social">
+              <a href="#" class="link-1"><img src="../assets/images/Frame-2.svg" alt="" /></a>
+            </li>
+          </ul>
+          <div class="footer__col-license">
+            <span>Ink. House ®</span>
+            <span>All rights reserved</span>
+            <span>&copy; 2019-2024</span>
+          </div>
+        </div>
       </div>
     </footer>
   </div>
 </template>
 
 <script>
-import Popup from '../components/Popup.vue'
-import BackToTop from 'vue-backtotop'
-export default {
-  components: {BackToTop ,Popup },
-  methods: {
-    openPopup(){
-      this.$refs.popup.openPopup();
-    }
-  },
-}
-
+import Popup from "../components/Popup.vue";
+import BackToTop from "vue-backtotop";
+export default {};
 </script>
 
 <style lang="scss" scoped>
+@use "../assets/mixins/text";
+@import "@/assets/mixin.scss";
+
 .LayoutDefault {
-  max-width: 1280px;
-
-  .LayoutDefault__header {
-
-    .LayoutDefault__nav {
-      min-height: 100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-       .call-voice{
-        all:unset;
-        transition: 1s;
-        border-bottom: 1px solid rgb(255, 255, 255);
-        &:hover{
-          color:red;
-          border-bottom: 1px solid rgb(255, 0, 0);
-          transition: 1s;
-        }
-       }
-      .nav-link {
-        display: flex;
-        justify-content: space-between;
-        width: 472px;
-
-        .router-link-exact-active {
-          color: #D90021;
-        }
-
-        .link-header {
-          text-decoration-line: none;
-
-          &:hover {
-            color: rgb(255, 0, 0);
-          }
-
-          .svg-color {
-            transition: 1s;
-
-            &:hover {
-              transform: scale(1.1);
-            }
-
-            &:active {
-              transition: 1s;
-              rotate: (360deg);
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .LayoutDefault__main {
-    min-height: 100vh;
-
-    .btn-to-top {
-      cursor: pointer;
-      width: 60px;
-      height: 60px;
-
-      border-radius: 50%;
-      font-size: 22px;
-      line-height: 22px;
-      background: #4e4e4e;
-      box-shadow: none;
-      border: none;
-      text-align: center;
-      transition: 1s;
-
-      &:hover {
-        scale: (105%);
-        transition: 0.4s;
-      }
-
-      img {
-        transition: 0.4s;
-        width: 40px;
-
-        &:hover {
-          transition: 0.4s;
-          scale: (0.4s);
-        }
-      }
-    }
-  }
-
-  .LayoutDefault__footer {
-    min-height: 17vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-    .LayoutDefault__footer--inner {
-
-
-
-      width: 1440px;
-      padding: 50px 0 50px 0;
-
-      .footer__wrapper {
-        display: flex;
-        justify-content: space-between;
-
-        .footer__label {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-
-          .contact-number {
-            display: flex;
-            flex-direction: column;
-          }
-        }
-
-        .footer__nav-links {
-          display: flex;
-          justify-content: space-around;
-          width: 445px;
-
-          .reproductions {
-            span {
-              font-weight: 600;
-            }
-
-            .link-nav {
-              list-style-type: none;
-            }
-          }
-
-          .new-product {
-            span {
-              font-weight: 600;
-            }
-
-            .link-nav {
-              list-style-type: none;
-            }
-          }
-
-          .about {
-            span {
-              font-weight: 600;
-            }
-
-            .link-nav {
-              list-style-type: none;
-            }
-          }
-        }
-
-        .footer__social {
-
-          .list-social {
-            list-style-type: none;
-            display: flex;
-            justify-content: space-between;
-          }
-
-          .license {
-            display: flex;
-            flex-direction: column;
-          }
-
-        }
-
-      }
-
-    }
-
-  }
-
+  display: grid;
+  grid-template-columns: auto;
+  align-content: space-between;
 }
 
-@media (width: 740px) {
-  .LayoutDefault {
-    max-width: 720px;
+.header {
+  position: sticky;
+  top: 0;
 
-    .LayoutDefault__header {
+ 
+  padding:  16rem 16rem 0 16rem;
 
-      .LayoutDefault__nav {
-        min-height: 100px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+  z-index: 10;
+  display: flex;
+  gap: 16rem;
+  align-items: center;
 
-        .nav-link {
-          display: flex;
-          justify-content: space-between;
-          width: 472px;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(16rem); 
+  border-radius: 10rem; 
+  box-shadow: 0 4rem 20rem rgba(0, 0, 0, 0.1);
 
-          .router-link-exact-active {
-            color: #D90021;
-          }
+  &__call-voice {
+  }
 
-          .link-header {
-            text-decoration-line: none;
+  &__nav {
+    background-color: var(--accent-dark-grey);
+    box-shadow: 1rem 1rem 10rem 1rem rgba(0, 0, 0, 0.384);
+    padding: 24rem 64rem;
+    border-radius: 24rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__nav-menu {
+    background-color: var(--accent-dark-grey);
+    box-shadow: 1rem 1rem 10rem 1rem rgba(0, 0, 0, 0.384);
+    padding: 24rem;
+    border-radius: 64rem;
+  }
 
-            &:hover {
-              color: rgb(255, 0, 0);
-            }
+  &__nav-link {
+    @include text.body-20;
 
-            .svg-color {
-              transition: 1s;
+    text-decoration: none;
+  }
 
-              &:hover {
-                transform: scale(1.1);
-              }
+  &__nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24rem;
+  }
+}
 
-              &:active {
-                transition: 1s;
-                rotate: (360deg);
-              }
-            }
-          }
-        }
-      }
+.main {
+}
+
+.footer {
+  padding: 24rem;
+  background-color: var(--accent-dark-grey);
+  border-radius: 24rem 24rem 0 0;
+  box-shadow: 1rem 1rem 10rem 1rem rgba(0, 0, 0, 0.384);
+
+  &__container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+
+    span {
+      @include text.body-20;
     }
+  }
 
-    .LayoutDefault__main {
-      min-height: 100vh;
+  &__col-license {
+    display: flex;
+    flex-direction: column;
 
-      .btn-to-top {
-        cursor: pointer;
-        width: 60px;
-        height: 60px;
+    gap: 6rem;
 
-        border-radius: 50%;
-        font-size: 22px;
-        line-height: 22px;
-        background: #4e4e4e;
-        box-shadow: none;
-        border: none;
-        text-align: center;
-        transition: 1s;
-
-        &:hover {
-          scale: (105%);
-          transition: 0.4s;
-        }
-
-        img {
-          transition: 0.4s;
-          width: 40px;
-
-          &:hover {
-            transition: 0.4s;
-            scale: (0.4s);
-          }
-        }
-      }
+    span {
+      @include text.body-14;
+      color: var(--main-medium-grey);
     }
+  }
 
-    .LayoutDefault__footer {
-      min-height: 17vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  &__col-number {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    justify-content: space-between;
+    height: 100%;
+  }
 
-
-      .LayoutDefault__footer--inner {
-        width: 1440px;
-
-        .footer__wrapper {
-          display: flex;
-          justify-content: space-between;
-
-          .footer__label {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            .contact-number {
-              display: flex;
-              flex-direction: column;
-            }
-          }
-
-          .footer__nav-links {
-            display: flex;
-            justify-content: space-around;
-            width: 445px;
-
-            .reproductions {
-              span {
-                font-weight: 600;
-              }
-
-              .link-nav {
-                list-style-type: none;
-              }
-            }
-
-            .new-product {
-              span {
-                font-weight: 600;
-              }
-
-              .link-nav {
-                list-style-type: none;
-              }
-            }
-
-            .about {
-              span {
-                font-weight: 600;
-              }
-
-              .link-nav {
-                list-style-type: none;
-              }
-            }
-          }
-
-          .footer__social {
-
-            .list-social {
-              list-style-type: none;
-              display: flex;
-              justify-content: space-between;
-            }
-
-            .license {
-              display: flex;
-              flex-direction: column;
-            }
-
-          }
-
-        }
-
-      }
-
+  &__link-nav {
+    a {
+      @include text.body-18;
+      color: var(--main-medium-grey);
     }
+  }
 
+  &__link-social {
+    @include text.body-14;
+  }
+
+  &__list-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  &__list-social {
+    display: flex;
+    flex-direction: row;
+    gap: 16rem;
+  }
+}
+
+.contact-number {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  @include text.body-20;
+
+  i {
+    color: var(--main-medium-grey);
+    @include text.body-16;
+  }
+}
+
+.svg-color {
+  @include hover {
+    transform: scale(1.2);
+    transform: rotate(-12deg) scale(1.2);
+    transition: 0.3s all ease-in-out;
   }
 }
 </style>

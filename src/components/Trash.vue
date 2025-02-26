@@ -36,13 +36,13 @@
   .container-trash__item{
     display: flex;
 
-max-width: 800px;
+max-width: 800rem;
 .card{
-  width: 329px;
+  width: 329rem;
   background-color: #535353;
 display: flex;
-margin: 10px;
-margin-top: 0px;
+margin: 10rem;
+margin-top: 0rem;
 
 align-items: center;
   justify-content: center;
@@ -58,8 +58,8 @@ align-items: center;
     display: flex;
     justify-content: space-between;
 .container-trash__buy--inner{
-  width: 285px;
-    max-height: 393px;
+  width: 285rem;
+    max-height: 393rem;
     background-color:#535353 ;
 
     display: flex;
@@ -72,9 +72,9 @@ align-items: center;
   button{
 
     all:unset;
-    margin-bottom: 10px;
-    width: 258px;
-    height: 71px;
+    margin-bottom: 10rem;
+    width: 258rem;
+    height: 71rem;
 
     background-color: #D90021;
     color: #fff;

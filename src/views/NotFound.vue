@@ -19,18 +19,18 @@ export default {
 .error {
   display: flex;
   justify-content: center;
-  margin: 150px;
+  margin: 150rem;
   flex-direction: row;
 
   .error-inner {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    font-size: 300px;
+    font-size: 300rem;
     font-weight: bolder;
     cursor: pointer;
     transition: 0.5s;
-    margin: 25px;
+    margin: 25rem;
 
     &:hover {
 

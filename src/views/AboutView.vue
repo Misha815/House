@@ -1,56 +1,50 @@
 <template>
   <layout-default>
     <div class="about">
-      <div class="about__">
-        <div class="about-left">
-          <h1>Наша команда</h1>
-          <p>Значимость этих проблем настолько очевидна, что базовый вектор развития позволяет оценить значение
-            экспериментов, поражающих по своей масштабности и грандиозности. Мы вынуждены отталкиваться от того, что
-            консультация с широким активом.</p>
+      <div class="about__top">
+        <div class="about__top-title">
+          <h1 class="headline-1">Наша команда</h1>
         </div>
-        <div class="about-right"></div>
+        <div class="about__top-desc">
+          <p>Значимость этих проблем настолько очевидна, что базовый вектор развития позволяет оценить значение экспериментов, поражающих по своей масштабности и грандиозности. Мы вынуждены отталкиваться от того, что консультация с широким активом.</p>
+        </div>
       </div>
-      <about-slider />
 
+      <div class="about__right"></div>
+
+      <about-slider />
     </div>
   </layout-default>
-
 </template>
 <script>
-import AboutSlider from '../components/AboutSlider.vue'
+import AboutSlider from "../components/AboutSlider.vue";
 
-import LayoutDefault from '../layout/LayoutDefault.vue'
+import LayoutDefault from "../layout/LayoutDefault.vue";
 
 export default {
-  components: { LayoutDefault, AboutSlider, },
-
-}
+  components: { LayoutDefault, AboutSlider },
+};
 </script>
 
 <style lang="scss">
+@use "../assets/mixins/text";
+@import "@/assets/mixin.scss";
+
 .about {
+  &__top {
+    margin-bottom: 42rem;
+    align-items: center;
+    background-color: var(--accent-dark-grey);
+   
+    padding: 20rem;
+    border-radius: 24rem;
+  }
 
+  &__top-title {
+  }
 
-  .about__ {
-    display: flex;
-    justify-content: space-evenly;
-
-
-    .about-left {
-      p {
-        max-width: 640px;
-        color: #ffffffe5;
-      }
-    }
-
-    .about-right {
-      width: 222px;
-      height: 222px;
-      background: no-repeat center url('../assets/images/AboutLogo.png');
-      border-radius: 40px;
-    }
+  &__top-desc {
+    @include text.body-20;
   }
 }
-
-@media (min-width: 1024px) {}
 </style>

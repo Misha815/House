@@ -1,0 +1,225 @@
+@import "./media";
+
+@mixin heading-bold-jetbrains-52 {
+  font-family: "JetBrains Mono";
+  font-size: 52rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin heading-bold-quantico-52 {
+  font-family: "AV Fontimer Med";
+  font-size: 52rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin heading-bold-48 {
+  font-family: "JetBrains Mono";
+  font-size: 48rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin heading-bold-44 {
+  font-family: "JetBrains Mono";
+  font-size: 44rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin heading-bold-32 {
+  font-family: "JetBrains Mono";
+  font-size: 32rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin heading-bold-quantico-20 {
+  font-family: "AV Fontimer Med";
+  font-size: 20rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin body-bold-28 {
+  font-family: "JetBrains Mono";
+  font-size: 28rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin body-medium-28 {
+  font-family: "JetBrains Mono";
+  font-size: 28rem;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@mixin heading-bold-quantico-26 {
+  font-family: "AV Fontimer Med";
+  font-size: 26rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin body-24 {
+  font-family: "JetBrains Mono";
+  font-size: 24rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin body-bold-24 {
+  font-family: "JetBrains Mono";
+  font-size: 24rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin body-extrabold-24 {
+  font-family: "JetBrains Mono";
+  font-size: 24rem;
+  font-weight: 800;
+  line-height: normal;
+}
+
+@mixin heading-bold-20 {
+  font-family: "JetBrains Mono";
+  font-size: 20rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin button-medium-24 {
+  font-family: "JetBrains Mono";
+  font-size: 24rem;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@mixin button-bold-24 {
+  font-family: "JetBrains Mono";
+  font-size: 24rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin button-bold-20 {
+  font-family: "JetBrains Mono";
+  font-size: 20rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin button-medium-20 {
+  font-family: "JetBrains Mono";
+  font-size: 20rem;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@mixin button-bold-18 {
+  font-family: "JetBrains Mono";
+  font-size: 18rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin button-medium-16 {
+  font-family: "JetBrains Mono";
+  font-size: 16rem;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@mixin body-20 {
+  font-family: "JetBrains Mono";
+  font-size: 20rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin body-bold-45 {
+  font-family: "JetBrains Mono";
+  font-size: 45rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin body-bold-32 {
+  font-family: "JetBrains Mono";
+  font-size: 32rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin body-bold-20 {
+  font-family: "JetBrains Mono";
+  font-size: 20rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin body-bold-18 {
+  font-family: "JetBrains Mono";
+  font-size: 18rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin body-18 {
+  font-family: "JetBrains Mono";
+  font-size: 18rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin body-bold-16 {
+  font-family: "JetBrains Mono";
+  font-size: 16rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin body-16 {
+  font-family: "JetBrains Mono";
+  font-size: 16rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin body-medium-16 {
+  font-family: "JetBrains Mono";
+  font-size: 16rem;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@mixin body-bold-14 {
+  font-family: "JetBrains Mono";
+  font-size: 14rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin body-bold-13 {
+  font-family: "JetBrains Mono";
+  font-size: 13rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin body-14 {
+  font-family: "JetBrains Mono";
+  font-size: 14rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin body-12 {
+  font-family: "JetBrains Mono";
+  font-size: 12rem;
+  font-weight: 400;
+  line-height: normal;
+}

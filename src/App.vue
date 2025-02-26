@@ -1,15 +1,6 @@
 <template>
-  <div class="container">
-    <router-view />
-  </div>
+  <router-view />
 </template>
 
-<script setup>
-
-</script>
-<style lang="scss" scoped>
-.container {
-  margin: 0 auto;
-
-}
-</style>
+<script setup></script>
+<style lang="scss" scoped></style>

@@ -66,23 +66,21 @@ export default {
     gap: 42rem;
     max-width: 768rem;
     padding: 64rem;
-
-
-   
   }
 
   &__content-text {
     @include text.body-18;
     max-width: 768rem;
+    color: var(--main-white);
   }
 
   &__content-title {
     @include text.heading-bold-44;
     display: flex;
     gap: 16rem;
+    color: var(--main-white);
 
     &::before {
-
       display: block;
       content: "";
       background-image: url("/src/assets/images/star.svg");

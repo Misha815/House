@@ -1,8 +1,8 @@
 <template>
 
-    <div class="shop-box">
+    <div class="shop-box container">
       <div class="shop-box__top">
-        <h2 class="headline-2">Репродукции</h2>
+        <h2 class="headline-2 headline-2--gray">Репродукции</h2>
         <div class="shop-box__tabs">
           <button @click="Franch" class="shop-box__tab">Франция</button>
           <button @click="Germany" class="shop-box__tab">Германия</button>
@@ -64,28 +64,33 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
   }
   &__tabs {
     display: flex;
-    gap: 16rem;
+    gap: 16rem; background-color: var(--accent-white);
+    padding: 8rem;
+    border-radius: 16rem;
   }
   &__tab {
     background-color: transparent;
     border: none;
     padding: 12rem;
-    color: var(--main-white);
-    border-radius: 24rem;
+    color: var(--accent-dark-grey);
+    border-radius: 16rem; border: 2rem solid transparent;
     cursor: pointer;
     @include text.body-20;
     transition: all 0.2s ease-in-out;
 
     @include hover {
       transition: all 0.2s ease-in-out;
-      color: var(--coloring-red);
+      color: var(--accent-blue);
     }
 
     &:focus {
-      background-color: var(--accent-dark-grey);
+      // background-color: var(--accent-dark-grey);
+      border: 2rem solid var(--accent-blue);
+      color: var(--accent-blue);
     }
   }
   &__content {
@@ -99,12 +104,12 @@ export default {
   &__more-link {
     @include text.body-20;
     text-align: center;
-    color: var(--main-white);
+    color: var(--accent-blue);
     transition: all 0.2s ease-in-out;
     text-decoration: none;
 
     @include hover {
-      color: var(--coloring-red);
+      opacity: 0.8;
       transition: all 0.2s ease-in-out;
     }
   }

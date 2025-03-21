@@ -1,10 +1,10 @@
 <template>
-  <div class=" LayoutDefault">
+  <div class="LayoutDefault">
     <div class="header">
       <nav class="header__nav">
         <div class="header__nav-links">
           <RouterLink class="header__nav-link" to="/">
-            <img src="../assets/images/logo.svg" alt="" />
+            <img src="../assets/images/logo-b.svg" alt="" />
           </RouterLink>
         </div>
 
@@ -14,11 +14,10 @@
           <RouterLink class="header__nav-link link-1" to="/about">О нас</RouterLink>
         </div>
       </nav>
-      <div class="header__nav-menu">
-        <RouterLink class="header__nav-link link-1" to="/trash"> <img class="svg-color" src="../assets/images/trash.svg" alt="" /> </RouterLink>
-      </div>
+
+      <RouterLink class="header__nav-menu link-1" to="/trash"> <img class="header__nav-menu--rotate" src="../assets/images/trash.svg" alt="" /> </RouterLink>
     </div>
-    <main class="main container">
+    <main class="main">
       <slot />
     </main>
     <footer class="footer">
@@ -26,7 +25,7 @@
         <div class="footer__col">
           <div class="footer__col-number">
             <a href="/">
-              <img src="../assets/images/logo.svg" alt="" />
+              <img src="../assets/images/logo-w.svg" alt="" />
             </a>
             <div class="contact-number">
               <span>+7 (999) 543-54-54</span>
@@ -91,6 +90,7 @@ export default {};
 @import "@/assets/mixin.scss";
 
 .LayoutDefault {
+  min-height: 100vh;
   display: grid;
   grid-template-columns: auto;
   align-content: space-between;
@@ -99,26 +99,21 @@ export default {};
 .header {
   position: sticky;
   top: 0;
-
- 
-  padding:  16rem 16rem 0 16rem;
-
+  padding: 16rem 16rem 0 16rem;
   z-index: 10;
   display: flex;
   gap: 16rem;
   align-items: center;
 
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(16rem); 
-  border-radius: 10rem; 
-  box-shadow: 0 4rem 20rem rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16rem);
+  border-radius: 10rem;
 
   &__call-voice {
   }
 
   &__nav {
-    background-color: var(--accent-dark-grey);
-    box-shadow: 1rem 1rem 10rem 1rem rgba(0, 0, 0, 0.384);
+    background-color: var(--accent-white);
+    box-shadow: 1rem 1rem 15rem 1rem rgba(0, 0, 0, 0.034);
     padding: 24rem 64rem;
     border-radius: 24rem;
     display: flex;
@@ -126,26 +121,39 @@ export default {};
     width: 100%;
   }
   &__nav-menu {
-    background-color: var(--accent-dark-grey);
-    box-shadow: 1rem 1rem 10rem 1rem rgba(0, 0, 0, 0.384);
+    background-color: var(--accent-blue);
+    box-shadow: 1rem 1rem 15rem 1rem rgba(0, 0, 0, 0.034);
     padding: 24rem;
     border-radius: 64rem;
-  }
-
-  &__nav-link {
     @include text.body-20;
 
     text-decoration: none;
+
+    transition: 0.3s all ease-in-out;
+
+    &--rotate {
+      @include hover {
+        transform: scale(1.2);
+        transform: rotate(-12deg) scale(1.2);
+        transition: 0.3s all ease-in-out;
+      }
+    }
   }
 
   &__nav-links {
     display: flex;
     align-items: center;
     gap: 24rem;
+
+    .link-1 {
+      color: var(--accent-dark-grey);
+      font-weight: 500;
+    }
   }
 }
 
 .main {
+  margin-top: 20rem;
 }
 
 .footer {
@@ -167,6 +175,7 @@ export default {};
 
     span {
       @include text.body-20;
+      color: var(--accent-white);
     }
   }
 
@@ -223,14 +232,6 @@ export default {};
   i {
     color: var(--main-medium-grey);
     @include text.body-16;
-  }
-}
-
-.svg-color {
-  @include hover {
-    transform: scale(1.2);
-    transform: rotate(-12deg) scale(1.2);
-    transition: 0.3s all ease-in-out;
   }
 }
 </style>

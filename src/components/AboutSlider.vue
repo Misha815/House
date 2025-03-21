@@ -61,35 +61,41 @@ onMounted(() => {
   margin-bottom: 42rem;
 
   &__slide {
-    background-color: var(--accent-dark-grey);
-    box-shadow: 1rem 1rem 10rem 1rem rgba(0, 0, 0);
+    background-color: var(--accent-white);
+    // box-shadow: 1rem 1rem 10rem 1rem rgba(0, 0, 0);
     border-radius: 24rem;
     display: flex;
     flex-direction: column;
     gap: 8rem;
+  
   }
 
   &__slide-image {
-    border-radius: 24rem 24rem 0 0;
+    border-radius: 24rem;
     width: 100%;
     height: 100%;
-    max-height: 512rem;
-    object-fit: fill;
+    max-height: 340rem;
+    object-fit: cover;
+ 
+    
   }
 
   &__slide-name {
     padding-left: 20rem;
     @include text.body-20;
+    color: var(--accent-dark-grey);
+    font-weight: 600;
   }
 
   &__slide-profile {
     padding-left: 20rem;
-    @include text.body-20;
+    @include text.body-20;color: var(--accent-dark-grey);
   }
 
   &__slide-stage {
     padding-left: 20rem;
-    @include text.body-20;
+    padding-bottom: 20rem;
+    @include text.body-20;color: var(--accent-dark-grey);
   }
 
   .embla {
@@ -100,7 +106,7 @@ onMounted(() => {
     --slide-size: 75%;
 
     &__slide {
-      opacity: 0.6;
+      opacity: 0.4;
     }
   }
 }
@@ -109,7 +115,8 @@ onMounted(() => {
   transform: scale(1.04);
   transition: all 0.5s ease-in-out;
   opacity: 1 !important;
-
-  
+  .about-slider__slide {
+    padding: 0;
+  }
 }
 </style>

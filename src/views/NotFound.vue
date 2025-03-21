@@ -1,18 +1,18 @@
 <template>
   <layout-default>
-    <div class="error"><span class="error-inner">4</span>
+    <div class="error">
+      <span class="error-inner">4</span>
       <span class="error-inner">0</span>
       <span class="error-inner">4</span>
-
     </div>
   </layout-default>
 </template>
 
 <script>
-import LayoutDefault from '../layout/LayoutDefault.vue'
+import LayoutDefault from "../layout/LayoutDefault.vue";
 export default {
   components: { LayoutDefault },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -31,12 +31,15 @@ export default {
     cursor: pointer;
     transition: 0.5s;
     margin: 25rem;
+    color: var(--accent-dark-grey);
+    animation-duration: 2s;
+    animation-name: error;
+
+    animation-direction: alternate;
 
     &:hover {
-
       scale: (120%);
       transition: 0.5s;
-
     }
 
     &:nth-child(2) {
@@ -48,5 +51,18 @@ export default {
     display: flex;
     justify-content: center;
   }
+
+  @keyframes error {
+    from {
+      scale: (100%);
+    }
+    50% {
+      scale: (120%);
+    }
+    to {
+      scale: (100%);
+    }
+  }
 }
 </style>
+

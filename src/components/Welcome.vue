@@ -1,7 +1,7 @@
 <template>
   <section class="section-1">
-    <div class="main">
-      <div class="main__wrapper">
+    <div class="main container">
+      <div class="main__wrapper" >
         <div class="main__wrapper-banner">
           <img src="../assets/images/main-banner.jpg" alt="Главный баннер" />
         </div>
@@ -16,15 +16,16 @@
 </template>
 
 <script>
-export default {};
+
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @use "../assets/mixins/text";
 @import "@/assets/mixin.scss";
 
 
 .main {
+  
   &__wrapper {
     position: relative;
    
@@ -55,14 +56,16 @@ export default {};
   }
 
   &__wrapper-heading-title {
+    color: var(--accent-white);
     span{
-      color: var(--coloring-red);
+      font-weight: 600;
+      color: var(--accent-blue);
     }
   }
 
   &__wrapper-heading-subtitle {
     @include text.body-20;
-    color: var(--medium-grey);
+    color: var(--accent-white);
   }
 }
 

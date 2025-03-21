@@ -1,7 +1,7 @@
 <template>
   <layout-default>
     <div class="about">
-      <div class="about__top">
+      <div class="about__left">
         <div class="about__top-title">
           <h1 class="headline-1">Наша команда</h1>
         </div>
@@ -31,20 +31,27 @@ export default {
 @import "@/assets/mixin.scss";
 
 .about {
-  &__top {
+  display: flex;
+  gap: 40rem;
+  &__left {
     margin-bottom: 42rem;
     align-items: center;
-    background-color: var(--accent-dark-grey);
-   
+    background-color: var(--accent-white);
+    max-width: 600rem;
     padding: 20rem;
-    border-radius: 24rem;
+    border-radius: 0 24rem 24rem 0;
+    z-index: 5;
   }
 
   &__top-title {
+    .headline-1{
+
+      color: var(--accent-dark-grey) !important;
+    }
   }
 
   &__top-desc {
-    @include text.body-20;
+    @include text.body-20;   color: var(--accent-dark-grey);
   }
 }
 </style>
